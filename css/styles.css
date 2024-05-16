@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   background-color: hsl(180, 52%, 96%);
-  font-family: "League Spartan", Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -89,4 +89,106 @@ main {
 }
 .filter-tag img:hover, .filter-tag img:focus {
   background-color: hsl(180, 14%, 20%);
+}
+
+.job-card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0 2rem;
+  border-left: 5px solid hsl(180, 29%, 50%);
+}
+.job-card .job-img {
+  position: relative;
+  top: -30px;
+  left: 10px;
+}
+.job-card .job-img img {
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
+}
+.job-card .job-content header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-20px);
+}
+.job-card .job-content .company {
+  margin: 0;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "League Spartan", sans-serif;
+}
+.job-card .job-content .job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.job-card .job-content .job-info .position {
+  margin: 0;
+  font-weight: 700;
+  font-family: "League Spartan", sans-serif;
+  cursor: pointer;
+}
+.job-card .job-content .job-info .position:hover {
+  color: hsl(180, 29%, 50%);
+}
+.job-card .job-content .job-info .job-props {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  color: hsl(180, 8%, 52%);
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+  position: relative;
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid hsl(180, 8%, 52%);
+}
+.job-card .job-content .job-info .job-props .job-prop:not(:last-child)::after {
+  content: ".";
+  font-size: 3rem;
+  padding-left: 1rem;
+  position: relative;
+  top: -5px;
+}
+.job-card .job-languages-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  padding: 10px 0 20px 0;
+}
+.job-card .job-languages-tools .language-tag {
+  background-color: hsl(180, 31%, 95%);
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  cursor: pointer;
+}
+.job-card .job-languages-tools .language-tag:hover, .job-card .job-languages-tools .language-tag:focus {
+  background-color: hsl(180, 29%, 50%);
+  color: #fff;
+}
+
+.commercial-tag {
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.commercial-tag--new {
+  background-color: hsl(180, 29%, 50%);
+  color: #fff;
+}
+
+.commercial-tag--featured {
+  background-color: hsl(180, 14%, 20%);
+  color: #fff;
 }

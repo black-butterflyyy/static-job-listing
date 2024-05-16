@@ -1,0 +1,44 @@
+﻿$primaryColor: hsl(180, 29%, 50%);
+$bgColor: hsl(180, 52%, 96%);
+$filterColor: hsl(180, 31%, 95%);
+$darkGrayishCyan: hsl(180, 8%, 52%);
+$veryDarkGrayishCyan: hsl(180, 14%, 20%);
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  // 10px
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  background-color: $bgColor;
+  font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0 30px;
+}

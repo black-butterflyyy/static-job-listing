@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(180, 52%, 96%);
+  font-family: "League Spartan", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0 30px;
+}
+
+.main-header {
+  background: url(../images/bg-header-mobile.svg);
+  background-color: hsl(180, 29%, 50%);
+  width: 100%;
+  height: 25vh;
+}
+
+.filter-box {
+  background-color: #fff;
+  padding: 2rem;
+  margin: 0 30px;
+  border-radius: 5px;
+  position: relative;
+  top: -50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter-box a {
+  color: hsl(180, 8%, 52%);
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.filter-box a:hover {
+  color: hsl(180, 29%, 50%);
+  text-decoration: underline;
+}
+
+.filters-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-tag {
+  background-color: hsl(180, 31%, 95%);
+  margin-right: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding-left: 1rem;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+}
+.filter-tag img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  background-color: hsl(180, 29%, 50%);
+  padding: 1rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+.filter-tag img:hover, .filter-tag img:focus {
+  background-color: hsl(180, 14%, 20%);
+}

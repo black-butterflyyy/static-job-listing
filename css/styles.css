@@ -186,9 +186,17 @@ main {
 .commercial-tag--new {
   background-color: hsl(180, 29%, 50%);
   color: #fff;
+  display: none;
+}
+.commercial-tag--new.active {
+  display: inline;
 }
 
 .commercial-tag--featured {
   background-color: hsl(180, 14%, 20%);
   color: #fff;
+  display: none;
+}
+.commercial-tag--featured.active {
+  display: inline;
 }

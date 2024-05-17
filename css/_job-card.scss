@@ -112,9 +112,19 @@
 .commercial-tag--new {
   background-color: $primaryColor;
   color: #fff;
+  display: none;
+
+  &.active {
+    display: inline;
+  }
 }
 
 .commercial-tag--featured {
   background-color: $veryDarkGrayishCyan;
   color: #fff;
+  display: none;
+
+  &.active {
+    display: inline;
+  }
 }

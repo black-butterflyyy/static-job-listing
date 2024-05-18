@@ -3,6 +3,7 @@
 const mainElement = document.querySelector('main');
 const filterBox = document.querySelector('.filter-box');
 const filterList = document.querySelector('.filters-list');
+const clearButton = document.querySelector('.clear-button');
 const searches = [];
 
 fetch('../data.json')
@@ -173,5 +174,14 @@ fetch('../data.json')
     };
 
     createDom(jobs);
+
+    const handleClearAllFilters = (e) => {
+      searches.length = 0;
+      filterBox.style.display = 'none';
+      mainElement.innerHTML = '';
+      createDom(jobs);
+    };
+
+    clearButton.addEventListener('click', handleClearAllFilters);
   })
   .catch((error) => console.error(error.message));

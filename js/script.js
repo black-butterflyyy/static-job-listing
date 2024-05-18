@@ -36,7 +36,7 @@ fetch('../data.json')
       newTag.appendChild(newTagText);
 
       const featuredTag = document.createElement('span');
-      featuredTag.classList = `commercial-tag commercial-tag--new ${
+      featuredTag.classList = `commercial-tag commercial-tag--featured ${
         job.featured ? 'active' : ''
       }`;
       const featuredTagText = document.createTextNode('Featured');
@@ -99,7 +99,6 @@ fetch('../data.json')
       jobCard.append(jobLanguagesAndTools);
 
       mainElement.appendChild(jobCard);
-      console.log(jobCard);
     });
   })
   .catch((error) => console.error(error.message));

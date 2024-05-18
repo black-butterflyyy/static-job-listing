@@ -1,10 +1,12 @@
 ﻿.main-header {
   background: url(../images/bg-header-mobile.svg);
   background-color: $primaryColor;
+  background-size: cover;
   width: 100%;
   height: 25vh;
   @include mediaDesktop {
     background: url(../images/bg-header-desktop.svg);
     background-color: $primaryColor;
+    background-size: cover;
   }
 }

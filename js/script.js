@@ -9,6 +9,11 @@ const searches = [];
 fetch('../data.json')
   .then((data) => data.json())
   .then((jobs) => {
+    const resetDom = () => {
+      filterBox.style.visibility = 'hidden';
+      mainElement.innerHTML = '';
+    };
+
     const createFilterListDom = () => {
       searches.forEach((term) => {
         const li = document.createElement('li');
@@ -35,8 +40,7 @@ fetch('../data.json')
         searches.splice(indexOfTarget, 1);
 
         if (!searches.length) {
-          filterBox.style.visibility = 'hidden';
-          mainElement.innerHTML = '';
+          resetDom();
           createDom(jobs);
           return;
         }
@@ -57,7 +61,7 @@ fetch('../data.json')
       filterBox.style.visibility = 'visible';
       filterList.innerHTML = '';
 
-      // create dom with new data
+      // Update dom with new data
       createFilterListDom();
       createDom(filteredJobs);
     };
@@ -68,6 +72,14 @@ fetch('../data.json')
         if (!searches.includes(search)) searches.push(search);
         filterJobs(jobs);
       }
+    };
+
+    const handleClearAllFilters = () => {
+      // Update state
+      searches.length = 0;
+      // Update dom
+      resetDom();
+      createDom(jobs);
     };
 
     const createDom = (jobs) => {
@@ -174,13 +186,6 @@ fetch('../data.json')
     };
 
     createDom(jobs);
-
-    const handleClearAllFilters = (e) => {
-      searches.length = 0;
-      filterBox.style.visibility = 'hidden';
-      mainElement.innerHTML = '';
-      createDom(jobs);
-    };
 
     clearButton.addEventListener('click', handleClearAllFilters);
   })

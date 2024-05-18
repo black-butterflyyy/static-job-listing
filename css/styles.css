@@ -60,7 +60,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  display: none;
+  visibility: hidden;
 }
 .filter-box a {
   color: hsl(180, 8%, 52%);

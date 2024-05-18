@@ -35,7 +35,7 @@ fetch('../data.json')
         searches.splice(indexOfTarget, 1);
 
         if (!searches.length) {
-          filterBox.style.display = 'none';
+          filterBox.style.visibility = 'hidden';
           mainElement.innerHTML = '';
           createDom(jobs);
           return;
@@ -54,7 +54,7 @@ fetch('../data.json')
 
       // Reset dom
       mainElement.innerHTML = '';
-      filterBox.style.display = 'flex';
+      filterBox.style.visibility = 'visible';
       filterList.innerHTML = '';
 
       // create dom with new data
@@ -177,7 +177,7 @@ fetch('../data.json')
 
     const handleClearAllFilters = (e) => {
       searches.length = 0;
-      filterBox.style.display = 'none';
+      filterBox.style.visibility = 'hidden';
       mainElement.innerHTML = '';
       createDom(jobs);
     };

@@ -6,7 +6,7 @@ const filterList = document.querySelector('.filters-list');
 const clearButton = document.querySelector('.clear-button');
 const searches = [];
 
-fetch('/data.json')
+fetch('./data.json')
   .then((data) => data.json())
   .then((jobs) => {
     const resetDom = () => {

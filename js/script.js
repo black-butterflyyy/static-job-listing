@@ -1,4 +1,6 @@
-﻿const mainElement = document.querySelector('main');
+﻿'use strict';
+
+const mainElement = document.querySelector('main');
 const filterBox = document.querySelector('.filter-box');
 const filterList = document.querySelector('.filters-list');
 const searches = [];
@@ -17,12 +19,32 @@ fetch('../data.json')
 
         const img = document.createElement('img');
         img.setAttribute('src', './images/icon-remove.svg');
+        img.classList.add('remove-item');
         li.appendChild(img);
         filterList.appendChild(li);
+
+        img.addEventListener('click', removeItem);
       });
     };
 
-    const filterJobs = (jobs) => {
+    const removeItem = (e) => {
+      const searchTerm = e.target.previousSibling.innerText;
+      const indexOfTarget = searches.indexOf(searchTerm);
+      if (indexOfTarget !== -1) {
+        searches.splice(indexOfTarget, 1);
+
+        if (!searches.length) {
+          filterBox.style.display = 'none';
+          mainElement.innerHTML = '';
+          createDom(jobs);
+          return;
+        }
+
+        filterJobs();
+      }
+    };
+
+    const filterJobs = () => {
       const filteredJobs = jobs.filter((job) =>
         searches.some(
           (term) => job.languages.includes(term) || job.tools.includes(term)
@@ -33,6 +55,7 @@ fetch('../data.json')
       mainElement.innerHTML = '';
       filterBox.style.display = 'flex';
       filterList.innerHTML = '';
+
       // create dom with new data
       createFilterListDom();
       createDom(filteredJobs);

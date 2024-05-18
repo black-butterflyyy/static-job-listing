@@ -110,7 +110,7 @@ main {
 }
 .job-card .job-content header {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   align-items: center;
   transform: translateY(-20px);
 }
@@ -163,7 +163,7 @@ main {
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
-  padding: 10px 0 20px 0;
+  padding: 20px 0;
 }
 .job-card .job-languages-tools .language-tag {
   background-color: hsl(180, 31%, 95%);

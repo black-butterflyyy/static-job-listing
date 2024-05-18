@@ -20,7 +20,7 @@
   .job-content {
     header {
       display: flex;
-      justify-content: space-between;
+      gap: 20px;
       align-items: center;
       transform: translateY(-20px);
     }
@@ -86,7 +86,7 @@
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    padding: 10px 0 20px 0;
+    padding: 20px 0;
 
     .language-tag {
       background-color: $filterColor;

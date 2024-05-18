@@ -10,6 +10,14 @@ $veryDarkGrayishCyan: hsl(180, 14%, 20%);
   align-items: center;
 }
 
+// Large devices (desktops, 992px and up)
+@mixin mediaDesktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+/*general styles */
 *,
 *::before,
 *::after {
@@ -41,4 +49,7 @@ ul {
 
 main {
   margin: 0 30px;
+  @include mediaDesktop {
+    margin: 0 100px;
+  }
 }

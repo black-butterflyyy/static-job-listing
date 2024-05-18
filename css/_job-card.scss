@@ -5,6 +5,14 @@
   border-left: 5px solid $primaryColor;
   margin-bottom: 5rem;
 
+  @include mediaDesktop {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+  }
+
   .job-img {
     position: relative;
     top: -30px;
@@ -15,6 +23,15 @@
       height: 20%;
       object-fit: cover;
     }
+
+    @include mediaDesktop {
+      position: static;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 
   .job-content {
@@ -23,6 +40,10 @@
       gap: 20px;
       align-items: center;
       transform: translateY(-20px);
+
+      @include mediaDesktop {
+        transform: none;
+      }
     }
 
     .company {
@@ -49,6 +70,10 @@
         &:hover {
           color: $primaryColor;
         }
+
+        @include mediaDesktop {
+          margin: 0.5rem 0;
+        }
       }
 
       .job-props {
@@ -64,6 +89,14 @@
         padding-bottom: 1.5rem;
         border-bottom: 1px solid $darkGrayishCyan;
 
+        @include mediaDesktop {
+          border-bottom: none;
+          padding: 0;
+          margin: 0;
+          transform: translateY(-10px);
+          font-size: 1.8rem;
+        }
+
         .job-prop {
           &::after {
             content: '.';
@@ -71,6 +104,10 @@
             padding-left: 1rem;
             position: relative;
             top: -5px;
+            @include mediaDesktop {
+              top: -3px;
+              padding-left: 1.5rem;
+            }
           }
 
           &:last-child::after {
@@ -87,6 +124,10 @@
     gap: 20px;
     align-items: center;
     padding: 20px 0;
+
+    @include mediaDesktop {
+      margin-left: auto;
+    }
 
     .language-tag {
       background-color: $filterColor;

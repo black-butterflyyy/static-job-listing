@@ -1,4 +1,5 @@
-﻿.filter-box {
+﻿/* Filter box section*/
+.filter-box {
   background-color: #fff;
   padding: 2rem;
   margin: 0 30px;
@@ -18,6 +19,10 @@
       color: $primaryColor;
       text-decoration: underline;
     }
+  }
+
+  @include mediaDesktop {
+    margin: 0 100px;
   }
 }
 
